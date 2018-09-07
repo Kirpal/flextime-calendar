@@ -7,6 +7,7 @@ let app = express();
 app.get('/flextime.ics', (req, res) => {
     res.setHeader('Content-Type', 'text/calendar');
     res.setHeader('Filename', 'flextime.ics');
+    res.setHeader('Content-Disposition', 'attachment; filename="flextime.ics"')
 
     axios({
         method: 'POST',
@@ -23,7 +24,7 @@ app.get('/flextime.ics', (req, res) => {
             let year = details.ScheduleDate.split('-')[0]
             let month = details.ScheduleDate.split('-')[1]
             let day = details.ScheduleDate.split('-')[2].split('T')[0]
-    
+
             let event = {
                 productId: '-//flextime calendar flextime-flextime.ics',
                 start: [year, month, day, 9, 10],
