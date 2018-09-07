@@ -1,0 +1,17 @@
+{
+  "name": "flextime",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.3",
+    "ics": "^2.7.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Kirpal",
+  "license": "ISC"
+}
