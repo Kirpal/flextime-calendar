@@ -7,7 +7,7 @@ const setup = require('./setup');
 const config = require('./config');
 
 // Load client secrets from a local file.
-fs.readFile(path.join('config', 'credentials.json'), (err, content) => {
+fs.readFile(path.join('/', 'config', 'credentials.json'), (err, content) => {
   if (err) return console.log('Error loading client secret file:', err);
   // Authorize a client with credentials, then call calendar sync
   authorize(JSON.parse(content), sync);
