@@ -1,7 +1,8 @@
 {
-  "name": "flextime",
+  "name": "flextime-calendar",
   "version": "1.0.0",
-  "description": "",
+  "description": "A tool to sync students' enriching students calendars with Google Calendar",
+  "repository": "kirpal/flextime-calendar",
   "main": "index.js",
   "dependencies": {
     "axios": "^0.18.0",
@@ -13,6 +14,10 @@
   "scripts": {
     "start": "node index.js"
   },
-  "author": "Kirpal",
-  "license": "ISC"
+  "author": {
+    "name": "Kirpal Demian",
+    "email": "demian@kirp.al",
+    "url": "https://kirp.al"
+  },
+  "license": "MIT"
 }
