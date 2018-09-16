@@ -6,7 +6,7 @@ const CronJob = require('cron').CronJob;
 const setup = require('./setup');
 const config = require('./config');
 
-const CREDENTIALS_PATH = path.join('/', 'config', 'credentials.json')
+const CREDENTIALS_PATH = path.join('config', 'credentials.json')
 
 // Load client secrets from a local file.
 fs.readFile(CREDENTIALS_PATH, (err, content) => {

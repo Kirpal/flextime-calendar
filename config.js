@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 
-const CONFIG_PATH = path.join('/', 'config', 'config.json');
+const CONFIG_PATH = path.join('config', 'config.json');
 
 let config = {};
 fs.readFile(CONFIG_PATH, (err, contents) => {
