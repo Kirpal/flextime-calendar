@@ -7,6 +7,7 @@ const SCOPES = ['https://www.googleapis.com/auth/calendar'];
 prompt.message = 'Setup'
 
 module.exports = {
+    // Using the app credentials, have the user get a token by logging into the given URL
     getAccessToken: function(oAuth2Client, callback) {
         const authUrl = oAuth2Client.generateAuthUrl({
           access_type: 'offline',
@@ -31,7 +32,8 @@ module.exports = {
               callback(oAuth2Client);
             });
         });
-    }, 
+    },
+    // List the users Google calendars and prompt for which one to add events to
     getCalendarId: function(auth, callback) {
         const calendar = google.calendar({version: 'v3', auth});
       
@@ -71,6 +73,7 @@ module.exports = {
         });
 
     },
+    // Using the given Enriching Students login, fetch an authenticated cookie to store for later
     getLogin: function(auth, callback) {
         prompt.start();
 
